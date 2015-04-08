@@ -22,14 +22,14 @@ var WikipediaThrower = React.createClass({
   },
 
   updateTerm: function () {
-    WikipediaActions.search(this.refs.input.getDOMNode().value);
+    WikipediaActions.search();
   },
 
   render: function() {
     return (
       <div>
-        <input ref="input" type="text" size="100" value={this.state.term} onChange={$.throttle(300, this.updateTerm)}/>
-        <ResultList results={this.state.results} term={this.state.term} />
+        <input type="button" value="最新を取得" onClick={this.updateTerm} />
+        <ResultList results={this.state.results} />
       </div>
     );
   },

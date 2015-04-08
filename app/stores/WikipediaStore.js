@@ -40,12 +40,10 @@ var WikipediaStore = merge(EventEmitter.prototype, {
 // Register to handle all updates
 AppDispatcher.register(function(payload) {
   var action = payload.action;
-  var term;
 
   switch(action.actionType) {
     case Constants.SEARCH:
-      _term = action.term;
-      _results = action.results;
+      _results = action.results.data;
       break;
 
     default:

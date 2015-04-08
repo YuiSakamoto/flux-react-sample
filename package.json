@@ -7,7 +7,10 @@
     "test": "jest"
   },
   "jest": {
-    "unmockedModulePathPatterns": ["events", "util"]
+    "unmockedModulePathPatterns": [
+      "events",
+      "util"
+    ]
   },
   "author": "Christian Alfoni",
   "license": "ISC",
@@ -39,5 +42,8 @@
     "reactify": "^0.14.0",
     "vinyl-source-stream": "^0.1.1",
     "watchify": "^1.0.2"
+  },
+  "dependencies": {
+    "superagent": "^1.1.0"
   }
 }
